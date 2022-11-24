@@ -12,6 +12,5 @@ steps:
   inputs:
     sourceGitRepositoryUri: 'https://github.com/Gyarbij/Artemis.git'
     sourceGitRepositoryPersonalAccessToken: '$(sourceVar)'
-    sourceVerifySSLCertificate: false
     destinationGitRepositoryUri: 'https://dev.azure.com/cgcsu/Prodigy/_git/Artemis'
     destinationGitRepositoryPersonalAccessToken: '$(destVar)'
