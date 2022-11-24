@@ -1,0 +1,17 @@
+# Mirror Artemis Prime
+
+trigger:
+- '*'
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: swellaby.mirror-git-repository.mirror-git-repository-vsts-task.mirror-git-repository-vsts-task@1
+  displayName: 'Mirror Git Repository'
+  inputs:
+    sourceGitRepositoryUri: 'https://github.com/swellaby/vsts-mirror-git-repository.git'
+    sourceGitRepositoryPersonalAccessToken: '$(sourceVar)'
+    sourceVerifySSLCertificate: false
+    destinationGitRepositoryUri: 'https://dev.azure.com/cgcsu/Prodigy/_git/Artemis'
+    destinationGitRepositoryPersonalAccessToken: '$(destVar)'
